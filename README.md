@@ -1,37 +1,38 @@
 # 🎭 Teatro mokytojų erdvė
 
 Svetainė teatro mokytojams: naujienos, renginiai, metodinė medžiaga ir patirties dalijimasis.
-Sukurta su [Jekyll](https://jekyllrb.com/) ir talpinama **nemokamai** per GitHub Pages.
+Sukurta su [Jekyll](https://jekyllrb.com/) ir talpinama **nemokamai** per Cloudflare Pages.
 
-**Adresas (paleidus):** https://rytiskopustas.github.io/Svetain-/
+**Adresas (paleidus):** https://teatromokytojai.pages.dev
 
 ---
 
-## 1. Kaip paleisti svetainę (vieną kartą)
+## 1. Kaip paleisti svetainę per Cloudflare Pages (vieną kartą)
 
-1. Sujunkite šią šaką su `main` (per Pull Request) – arba naudokite šią šaką tiesiogiai.
-2. GitHub saugykloje atidarykite **Settings → Pages**.
-3. Skiltyje **Build and deployment** pasirinkite:
-   - *Source*: **Deploy from a branch**
-   - *Branch*: **main** (arba šią šaką), aplankas **/ (root)** → **Save**.
-4. Po 1–2 min. svetainė veiks adresu `https://rytiskopustas.github.io/Svetain-/`.
+1. Užsiregistruokite nemokamai: https://dash.cloudflare.com/sign-up
+2. Kairiajame meniu: **Workers & Pages** → **Create** → skirtukas **Pages** →
+   **Connect to Git** (Import an existing Git repository).
+3. Prijunkite GitHub paskyrą ir pasirinkite saugyklą **Svetain-**.
+4. Nustatymai:
+   - **Project name:** `teatromokytojai` (tai bus adresas `teatromokytojai.pages.dev`)
+   - **Production branch:** `main` (arba ši šaka, jei dar nesujungta su `main`)
+   - **Framework preset:** `Jekyll`
+   - **Build command:** `bundle exec jekyll build`
+   - **Build output directory:** `_site`
+5. Spauskite **Save and Deploy**. Po 1–3 min. svetainė veiks.
 
-> 💡 Patarimas: jei pervadinsite saugyklą (pvz. į `teatro-mokytojai`), pakeiskite
-> `baseurl` faile `_config.yml` į `"/teatro-mokytojai"`. Jei saugyklą pavadinsite
-> `rytiskopustas.github.io`, adresas bus tiesiog `https://rytiskopustas.github.io`
-> (tada `baseurl: ""`).
+Kaskart įkėlus pakeitimus į GitHub, Cloudflare svetainę atnaujina automatiškai.
 
-## 2. Nemokamo domeno galimybės
+> ⚠️ Jei vardas `teatromokytojai` užimtas, Cloudflare pridės priesagą
+> (pvz. `teatromokytojai-abc.pages.dev`). Tada pakeiskite `url` faile `_config.yml`.
 
-| Variantas | Adresas | Kaina |
-|---|---|---|
-| **GitHub Pages** (jau paruošta) | `rytiskopustas.github.io/Svetain-` | Nemokamai |
-| Netlify / Cloudflare Pages | `pavadinimas.netlify.app` / `pavadinimas.pages.dev` | Nemokamai |
-| Nuosavas domenas (pvz. `teatromokytojai.lt`) | `teatromokytojai.lt` | ~10–20 €/metus |
+## 2. Nuosavas domenas vėliau (pvz. `www.teatromokytojai.lt`)
 
-Įsigiję nuosavą domeną, sukurkite failą `CNAME` su domeno pavadinimu, `_config.yml`
-nustatykite `url: "https://jusu-domenas.lt"` ir `baseurl: ""`, o domeno DNS nukreipkite
-į GitHub Pages ([instrukcija](https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site)).
+1. Įsigykite domeną pas `.lt` registratorių (sąrašas – [domreg.lt](https://www.domreg.lt)), ~10–20 €/metus.
+2. Cloudflare: projektas → **Custom domains** → **Set up a custom domain** → įveskite
+   `www.teatromokytojai.lt` ir sekite nurodymus (reikės registratoriaus DNS nustatymuose
+   pridėti CNAME įrašą `www` → `teatromokytojai.pages.dev`).
+3. Faile `_config.yml` pakeiskite `url: "https://www.teatromokytojai.lt"`.
 
 ## 3. Kaip pridėti turinį (tiesiog per GitHub svetainę)
 
@@ -71,5 +72,5 @@ prenumeruoti (pvz. Feedly, Inoreader).
 ```bash
 bundle install
 bundle exec jekyll serve
-# atidarykite http://localhost:4000/Svetain-/
+# atidarykite http://localhost:4000/
 ```

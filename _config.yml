@@ -5,9 +5,9 @@ description: >-
   ir patirties dalijimasis.
 lang: lt
 
-# GitHub Pages adresas: https://rytiskopustas.github.io/Svetain-/
-url: "https://rytiskopustas.github.io"
-baseurl: "/Svetain-"
+# Svetainės adresas (Cloudflare Pages). Įsigijus domeną, pakeiskite į "https://www.teatromokytojai.lt"
+url: "https://teatromokytojai.pages.dev"
+baseurl: ""
 
 # Kontaktai (pakeiskite savais)
 email: rytis.kopustas@gmail.com
@@ -32,4 +32,5 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - .ruby-version
   - vendor

@@ -1,0 +1,6 @@
+<article class="card">
+  <p class="meta"><time datetime="{{ include.post.date | date_to_xmlschema }}">{% include data-lt.html date=include.post.date %}</time></p>
+  <h3><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h3>
+  <p>{{ include.post.excerpt | strip_html | truncatewords: 28 }}</p>
+  {% if include.post.tags.size > 0 %}<p>{% for tag in include.post.tags %}<span class="tag">{{ tag }}</span>{% endfor %}</p>{% endif %}
+</article>

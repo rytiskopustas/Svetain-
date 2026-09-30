@@ -1,0 +1,15 @@
+<a class="skip" href="#turinys">Pereiti prie turinio</a>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="{{ '/' | relative_url }}"><span aria-hidden="true">🎭</span> {{ site.title }}</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="meniu">Meniu</button>
+    <nav id="meniu" class="nav" aria-label="Pagrindinis meniu">
+      {%- assign nav = "naujienos/:Naujienos,renginiai/:Renginiai,istekliai/:Ištekliai,prisidek/:Prisidėk,apie/:Apie" | split: "," -%}
+      {%- for item in nav -%}
+        {%- assign parts = item | split: ":" -%}
+        {%- assign href = "/" | append: parts[0] -%}
+        <a href="{{ href | relative_url }}"{% if page.url contains href %} aria-current="page"{% endif %}>{{ parts[1] }}</a>
+      {%- endfor -%}
+    </nav>
+  </div>
+</header>

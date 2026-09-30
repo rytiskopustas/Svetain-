@@ -1,0 +1,29 @@
+# Renginių sąrašas. Norėdami pridėti renginį, nukopijuokite bloką ir pakeiskite reikšmes.
+# data – formatu MMMM-MM-DD. Praėję renginiai automatiškai perkeliami į „Įvykę“.
+# PASTABA: žemiau pateikti renginiai yra PAVYZDŽIAI – pakeiskite juos tikrais.
+
+- pavadinimas: "Pavyzdys: seminaras „Improvizacija pamokoje“"
+  data: 2026-10-15
+  laikas: "15:00–17:00"
+  vieta: "Nuotoliu (Zoom)"
+  aprasymas: "Praktiniai improvizacijos pratimai, kuriuos galima iškart taikyti klasėje."
+  nuoroda: ""
+
+- pavadinimas: "Pavyzdys: mokyklinių teatrų festivalis"
+  data: 2026-11-20
+  laikas: "10:00"
+  vieta: "Vilnius"
+  aprasymas: "Mokyklų teatro kolektyvų pasirodymai ir aptarimai su teatro profesionalais."
+  nuoroda: ""
+
+- pavadinimas: "Pavyzdys: teatro mokytojų susitikimas"
+  data: 2026-12-05
+  laikas: "12:00"
+  vieta: "Kaunas"
+  aprasymas: "Neformalus susitikimas – dalijamės metų patirtimi ir planais."
+  nuoroda: ""
+
+- pavadinimas: "Pavyzdys: vasaros kūrybinės dirbtuvės"
+  data: 2026-08-18
+  vieta: "Klaipėda"
+  aprasymas: "Trijų dienų dirbtuvės apie judesį ir kūno raišką scenoje."

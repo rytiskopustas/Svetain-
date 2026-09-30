@@ -1,0 +1,21 @@
+---
+layout: default
+title: Naujienos
+permalink: /naujienos/
+---
+<h1>Naujienos</h1>
+<p class="lead">Konkursai, festivaliai, kvalifikacijos kėlimo galimybės ir švietimo aktualijos. Naujienas galite sekti per <a href="{{ '/feed.xml' | relative_url }}">RSS srautą</a>.</p>
+
+{% assign tags = site.tags | sort %}
+{% if tags.size > 0 %}
+<div class="filters" role="group" aria-label="Filtruoti pagal temą">
+  <button class="chip is-active" data-filter="">Visos</button>
+  {% for t in tags %}<button class="chip" data-filter="{{ t[0] }}">{{ t[0] }}</button>{% endfor %}
+</div>
+{% endif %}
+
+<div class="grid" data-filterable>
+{% for post in site.posts %}
+  <div data-tags="{{ post.tags | join: ',' }}">{% include post-card.html post=post %}</div>
+{% endfor %}
+</div>

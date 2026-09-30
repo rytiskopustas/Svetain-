@@ -1,0 +1,28 @@
+---
+layout: default
+title: Renginiai
+permalink: /renginiai/
+---
+<h1>Renginiai</h1>
+<p class="lead">Seminarai, kursai, festivaliai ir spektakliai, aktualūs teatro pedagogams. Žinote renginį, kurio čia nėra? <a href="{{ '/prisidek/' | relative_url }}">Praneškite mums</a>.</p>
+
+{% assign now = site.time | date: "%Y-%m-%d" %}
+{% assign renginiai = site.data.renginiai | sort: "data" %}
+
+<h2>Artėjantys</h2>
+<div class="event-list" data-upcoming>
+{% for e in renginiai %}
+  {% assign d = e.data | date: "%Y-%m-%d" %}
+  {% if d >= now %}{% include event.html event=e %}{% endif %}
+{% endfor %}
+</div>
+<p class="empty-note" hidden>Artėjančių renginių šiuo metu nėra.</p>
+
+<h2>Įvykę</h2>
+<div class="event-list past">
+{% assign atvirksciai = renginiai | reverse %}
+{% for e in atvirksciai %}
+  {% assign d = e.data | date: "%Y-%m-%d" %}
+  {% if d < now %}{% include event.html event=e %}{% endif %}
+{% endfor %}
+</div>

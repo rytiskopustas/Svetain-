@@ -1,0 +1,3 @@
+{%- assign menesiai = "sausio,vasario,kovo,balandžio,gegužės,birželio,liepos,rugpjūčio,rugsėjo,spalio,lapkričio,gruodžio" | split: "," -%}
+{%- assign m = include.date | date: "%-m" | minus: 1 -%}
+{{- include.date | date: "%Y" }} m. {{ menesiai[m] }} {{ include.date | date: "%-d" }} d.

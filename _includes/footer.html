@@ -1,0 +1,17 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>{{ site.title }}</strong>
+      <p>{{ site.description }}</p>
+    </div>
+    <div>
+      <strong>Sekite naujienas</strong>
+      <p><a href="{{ '/feed.xml' | relative_url }}">RSS srautas</a> – prenumeruokite savo naujienų skaitytuve.</p>
+    </div>
+    <div>
+      <strong>Susisiekite</strong>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    </div>
+  </div>
+  <p class="container small">© {{ site.time | date: "%Y" }} {{ site.title }}</p>
+</footer>

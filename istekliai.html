@@ -1,0 +1,29 @@
+---
+layout: default
+title: Ištekliai
+permalink: /istekliai/
+---
+<h1>Ištekliai</h1>
+<p class="lead">Pratimai, pamokų planai, naudingos organizacijos ir nuorodos. Turite ką pasidalinti? <a href="{{ '/prisidek/' | relative_url }}">Siųskite mums</a>.</p>
+
+<label class="search">
+  <span>Paieška</span>
+  <input type="search" id="paieska" placeholder="Ieškoti išteklių…" autocomplete="off">
+</label>
+
+{% assign grupes = site.data.istekliai | group_by: "kategorija" %}
+{% for g in grupes %}
+<section class="res-group">
+  <h2>{{ g.name }}</h2>
+  <ul class="res-list">
+    {% for r in g.items %}
+    {% assign vidinis = r.nuoroda | slice: 0 %}
+    <li data-search="{{ r.pavadinimas | downcase }} {{ r.aprasymas | downcase }}">
+      <a href="{% if vidinis == '/' %}{{ r.nuoroda | relative_url }}{% else %}{{ r.nuoroda }}{% endif %}"{% if vidinis != '/' %} target="_blank" rel="noopener"{% endif %}>{{ r.pavadinimas }}</a>{% if vidinis != '/' %} <span class="ext" aria-label="išorinė nuoroda">↗</span>{% endif %}
+      <p>{{ r.aprasymas }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}
+<p class="empty-note" id="nieko" hidden>Nieko nerasta.</p>

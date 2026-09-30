@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<section class="hero">
+  <h1>Erdvė teatro mokytojams</h1>
+  <p class="lead">Dalinkitės patirtimi, raskite metodinės medžiagos, sekite naujienas ir renginius – viskas vienoje vietoje.</p>
+  <p class="hero-actions">
+    <a class="btn" href="{{ '/naujienos/' | relative_url }}">Skaityti naujienas</a>
+    <a class="btn btn-ghost" href="{{ '/prisidek/' | relative_url }}">Pasidalinti medžiaga</a>
+  </p>
+</section>
+
+<section class="quick">
+  <a class="quick-item" href="{{ '/naujienos/' | relative_url }}"><span aria-hidden="true">📰</span><strong>Naujienos</strong><span>Konkursai, festivaliai, švietimo pokyčiai</span></a>
+  <a class="quick-item" href="{{ '/renginiai/' | relative_url }}"><span aria-hidden="true">📅</span><strong>Renginiai</strong><span>Seminarai, kursai, premjeros</span></a>
+  <a class="quick-item" href="{{ '/istekliai/' | relative_url }}"><span aria-hidden="true">📚</span><strong>Ištekliai</strong><span>Pratimai, pamokų planai, nuorodos</span></a>
+  <a class="quick-item" href="{{ '/prisidek/' | relative_url }}"><span aria-hidden="true">🤝</span><strong>Prisidėk</strong><span>Pasidalink savo patirtimi</span></a>
+</section>
+
+<div class="two-col">
+  <section>
+    <h2>Naujausios naujienos</h2>
+    {% for post in site.posts limit:3 %}
+      {% include post-card.html post=post %}
+    {% else %}
+      <p>Naujienų dar nėra.</p>
+    {% endfor %}
+    <p><a href="{{ '/naujienos/' | relative_url }}">Visos naujienos →</a></p>
+  </section>
+
+  <section>
+    <h2>Artėjantys renginiai</h2>
+    {% assign now = site.time | date: "%Y-%m-%d" %}
+    {% assign renginiai = site.data.renginiai | sort: "data" %}
+    <div class="event-list" data-upcoming data-limit="4">
+    {% for e in renginiai %}
+      {% assign d = e.data | date: "%Y-%m-%d" %}
+      {% if d >= now %}{% include event.html event=e %}{% endif %}
+    {% endfor %}
+    </div>
+    <p class="empty-note" hidden>Artėjančių renginių šiuo metu nėra.</p>
+    <p><a href="{{ '/renginiai/' | relative_url }}">Visi renginiai →</a></p>
+  </section>
+</div>

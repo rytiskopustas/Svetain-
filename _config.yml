@@ -1,0 +1,35 @@
+# Pagrindiniai svetainės nustatymai
+title: Teatro mokytojų erdvė
+description: >-
+  Bendruomenė teatro mokytojams – naujienos, renginiai, metodinė medžiaga
+  ir patirties dalijimasis.
+lang: lt
+
+# GitHub Pages adresas: https://rytiskopustas.github.io/Svetain-/
+url: "https://rytiskopustas.github.io"
+baseurl: "/Svetain-"
+
+# Kontaktai (pakeiskite savais)
+email: rytis.kopustas@gmail.com
+
+timezone: Europe/Vilnius
+permalink: /naujienos/:year/:month/:title/
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

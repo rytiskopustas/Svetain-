@@ -1,0 +1,14 @@
+{%- assign e = include.event -%}
+<article class="event" data-date="{{ e.data | date: "%Y-%m-%d" }}">
+  <div class="event-date" aria-hidden="true">
+    <span class="day">{{ e.data | date: "%-d" }}</span>
+    {%- assign men = "saus.,vas.,kov.,bal.,geg.,birž.,liep.,rugp.,rugs.,spal.,lapkr.,gruod." | split: "," -%}
+    {%- assign mi = e.data | date: "%-m" | minus: 1 -%}
+    <span class="mon">{{ men[mi] }}</span>
+  </div>
+  <div>
+    <h3>{% if e.nuoroda %}<a href="{{ e.nuoroda }}">{{ e.pavadinimas }}</a>{% else %}{{ e.pavadinimas }}{% endif %}</h3>
+    <p class="meta">{% include data-lt.html date=e.data %}{% if e.laikas %}, {{ e.laikas }}{% endif %} · {{ e.vieta }}</p>
+    {% if e.aprasymas %}<p>{{ e.aprasymas }}</p>{% endif %}
+  </div>
+</article>

@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="post">
+  <p class="back"><a href="{{ '/naujienos/' | relative_url }}">← Visos naujienos</a></p>
+  <header>
+    <h1>{{ page.title }}</h1>
+    <p class="meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{% include data-lt.html date=page.date %}</time>
+      {% if page.author %} · {{ page.author }}{% endif %}
+      {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+    </p>
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>

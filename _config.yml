@@ -32,5 +32,4 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
-  - .ruby-version
   - vendor

@@ -33,3 +33,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - wrangler.jsonc
+  - .ruby-version
+  - node_modules

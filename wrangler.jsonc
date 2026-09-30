@@ -1,0 +1,10 @@
+// Cloudflare nustatymai: paskelbti jau sugeneruotą Jekyll svetainę iš _site aplanko
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "teatromokytojai",
+  "compatibility_date": "2026-09-30",
+  "assets": {
+    "directory": "_site",
+    "not_found_handling": "404-page"
+  }
+}

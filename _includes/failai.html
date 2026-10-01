@@ -1,0 +1,17 @@
+{%- if include.failai and include.failai.size > 0 -%}
+<section class="attachments" aria-labelledby="failai-antraste">
+  <h2 id="failai-antraste">📎 Prisegti failai</h2>
+  <ul>
+    {%- for f in include.failai -%}
+    {%- assign ext = f.failas | split: "." | last | upcase -%}
+    {%- assign isorinis = f.failas | slice: 0, 4 -%}
+    <li>
+      <a href="{% if isorinis == 'http' %}{{ f.failas }}{% else %}{{ f.failas | relative_url }}{% endif %}"{% if isorinis != 'http' %} download{% else %} target="_blank" rel="noopener"{% endif %}>
+        <span class="file-ext">{% if isorinis == 'http' %}↗{% else %}{{ ext }}{% endif %}</span>
+        <span>{{ f.pavadinimas | default: f.failas }}</span>
+      </a>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+{%- endif -%}

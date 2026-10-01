@@ -34,6 +34,17 @@ content:
       - name: image
         label: Nuotrauka (nebūtina)
         type: image
+      - name: failai
+        label: Prisegti failai
+        type: object
+        list: true
+        fields:
+          - name: pavadinimas
+            label: Pavadinimas (pvz. Nuostatai, PDF)
+            type: string
+          - name: failas
+            label: Failas
+            type: file
       - name: body
         label: Tekstas
         type: rich-text

@@ -62,6 +62,16 @@ tags: [konkursai]
 Naujienos tekstas. **Paryškintas**, *pasviręs*, [nuoroda](https://...).
 ```
 
+Prisegti failai: įkelkite failą į `assets/failai/` ir naujienos antraštėje pridėkite:
+
+```yaml
+failai:
+  - pavadinimas: Festivalio nuostatai
+    failas: /assets/failai/nuostatai.pdf
+  - pavadinimas: Registracijos forma
+    failas: https://forms.gle/...
+```
+
 ### Naujas renginys
 Redaguokite `_data/renginiai.yml` – nukopijuokite esamą bloką ir pakeiskite reikšmes.
 Praėję renginiai automatiškai persikelia į „Įvykę“.

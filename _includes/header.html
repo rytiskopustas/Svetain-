@@ -2,7 +2,7 @@
 <header class="site-header">
   <div class="container nav-wrap">
     <a class="brand" href="{{ '/' | relative_url }}"><span aria-hidden="true">🎭</span> {{ site.title }}</a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="meniu">Meniu</button>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="meniu" aria-label="Meniu"><span></span><span></span><span></span></button>
     <nav id="meniu" class="nav" aria-label="Pagrindinis meniu">
       {%- assign nav = "naujienos/:Naujienos,renginiai/:Renginiai,istekliai/:Ištekliai,prisidek/:Prisidėk,apie/:Apie" | split: "," -%}
       {%- for item in nav -%}

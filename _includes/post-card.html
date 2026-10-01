@@ -1,4 +1,4 @@
-<article class="card">
+<article class="card card-link">
   {% if include.post.image %}<img class="card-image" src="{{ include.post.image | relative_url }}" alt="" loading="lazy">{% endif %}
   <p class="meta"><time datetime="{{ include.post.date | date_to_xmlschema }}">{% include data-lt.html date=include.post.date %}</time></p>
   <h3><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h3>

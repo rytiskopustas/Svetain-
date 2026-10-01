@@ -13,4 +13,4 @@ Teatras – tai ne tik vaidyba scenoje. Įsijausdami į kito žmogaus vaidmenį,
 2. **Karštoji kėdė** – grupė klausinėja vaidmenį įkūnijusį mokinį.
 3. **Tylos scena** – veikėjų jausmai perteikiami tik kūnu, be žodžių.
 
-Daugiau pratimų rasite skiltyje [Ištekliai]({{ '/istekliai/' | relative_url }}).
+Daugiau pratimų rasite skiltyje [Ištekliai](/istekliai/).

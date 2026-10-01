@@ -1,10 +1,9 @@
 ---
-layout: page
 title: Pamokos plano šablonas
 lead: Paprasta struktūra teatro pamokai (45 min.). Nukopijuokite ir pritaikykite.
 ---
 
-[← Visi ištekliai]({{ '/istekliai/' | relative_url }})
+[← Visi ištekliai](/istekliai/)
 
 | Dalis | Laikas | Turinys |
 |---|---|---|

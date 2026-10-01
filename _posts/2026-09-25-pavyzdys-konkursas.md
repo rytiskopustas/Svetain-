@@ -13,4 +13,4 @@ Kviečiame mokyklų teatro kolektyvus registruotis į festivalį. Registracija v
 2. Trumpą spektaklio aprašymą,
 3. Kolektyvo vadovo kontaktus.
 
-Daugiau informacijos – [renginių puslapyje]({{ '/renginiai/' | relative_url }}).
+Daugiau informacijos – [renginių puslapyje](/renginiai/).

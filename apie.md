@@ -15,6 +15,6 @@ Sukurti vietą, kur teatro mokytojai galėtų:
 Teatro ir dramos mokytojams, neformaliojo švietimo teatro studijų vadovams, būrelių vadovams ir visiems, kurie teatrą naudoja ugdyme.
 
 ## Kontaktai
-El. paštas: [{{ site.email }}](mailto:{{ site.email }})
+El. paštas: [rytis.kopustas@gmail.com](mailto:rytis.kopustas@gmail.com)
 
-Norite prisidėti? Užsukite į skiltį [Prisidėk]({{ '/prisidek/' | relative_url }}).
+Norite prisidėti? Užsukite į skiltį [Prisidėk](/prisidek/).

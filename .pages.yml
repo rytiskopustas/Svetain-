@@ -1,0 +1,137 @@
+# Pages CMS nustatymai (https://app.pagescms.org)
+# Aprašo, kokį turinį galima redaguoti per patogią sąsają.
+
+settings:
+  content:
+    merge: true   # išsaugant nepašalinti laukų, kurių nėra formoje
+
+media:
+  input: assets/images
+  output: /assets/images
+  categories: [image, document]
+
+content:
+  - name: naujienos
+    label: Naujienos
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, author]
+    fields:
+      - name: title
+        label: Pavadinimas
+        type: string
+        required: true
+      - name: author
+        label: Autorius
+        type: string
+        default: Redakcija
+      - name: tags
+        label: Temos (pvz. konkursai, festivaliai, metodika)
+        type: string
+        list: true
+      - name: image
+        label: Nuotrauka (nebūtina)
+        type: image
+      - name: body
+        label: Tekstas
+        type: rich-text
+
+  - name: renginiai
+    label: Renginiai
+    type: file
+    path: _data/renginiai.yml
+    list: true
+    fields:
+      - name: pavadinimas
+        label: Pavadinimas
+        type: string
+        required: true
+      - name: data
+        label: Data
+        type: date
+        required: true
+      - name: laikas
+        label: Laikas (pvz. 15:00–17:00)
+        type: string
+      - name: vieta
+        label: Vieta
+        type: string
+      - name: aprasymas
+        label: Aprašymas
+        type: text
+      - name: nuoroda
+        label: Nuoroda (nebūtina)
+        type: string
+
+  - name: istekliai
+    label: Ištekliai (sąrašas)
+    type: file
+    path: _data/istekliai.yml
+    list: true
+    fields:
+      - name: pavadinimas
+        label: Pavadinimas
+        type: string
+        required: true
+      - name: kategorija
+        label: Kategorija (pvz. Pratimai ir žaidimai, Pamokų planai, Organizacijos)
+        type: string
+        required: true
+      - name: aprasymas
+        label: Aprašymas
+        type: text
+      - name: nuoroda
+        label: Nuoroda (pvz. https://... arba /istekliai/puslapis/)
+        type: string
+
+  - name: medziaga
+    label: Metodinė medžiaga (puslapiai)
+    type: collection
+    path: istekliai
+    filename: "{primary}.md"
+    view:
+      fields: [title]
+    fields:
+      - name: title
+        label: Pavadinimas
+        type: string
+        required: true
+      - name: lead
+        label: Trumpas aprašymas
+        type: text
+      - name: body
+        label: Tekstas
+        type: rich-text
+
+  - name: apie
+    label: Puslapis „Apie“
+    type: file
+    path: apie.md
+    fields:
+      - name: title
+        label: Pavadinimas
+        type: string
+      - name: lead
+        label: Įžanga
+        type: text
+      - name: body
+        label: Tekstas
+        type: rich-text
+
+  - name: nustatymai
+    label: Svetainės nustatymai
+    type: file
+    path: _config.yml
+    fields:
+      - name: title
+        label: Svetainės pavadinimas
+        type: string
+        required: true
+      - name: description
+        label: Svetainės aprašymas
+        type: text
+      - name: email
+        label: Kontaktinis el. paštas
+        type: string

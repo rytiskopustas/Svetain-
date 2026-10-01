@@ -11,4 +11,4 @@ Džiaugiamės galėdami pristatyti naują erdvę teatro mokytojams. Čia rasite 
 - **Renginiai** – seminarai, festivaliai, kursai.
 - **Ištekliai** – pratimai, pamokų planai, naudingos nuorodos.
 
-Norite prisidėti? Užsukite į skiltį [Prisidėk]({{ '/prisidek/' | relative_url }}).
+Norite prisidėti? Užsukite į skiltį [Prisidėk](/prisidek/).

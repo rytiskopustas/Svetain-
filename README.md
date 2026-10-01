@@ -34,7 +34,19 @@ Kaskart įkėlus pakeitimus į GitHub, Cloudflare svetainę atnaujina automatiš
    pridėti CNAME įrašą `www` → `teatromokytojai.pages.dev`).
 3. Faile `_config.yml` pakeiskite `url: "https://www.teatromokytojai.lt"`.
 
-## 3. Kaip pridėti turinį (tiesiog per GitHub svetainę)
+## 3. Turinio redagavimas per Pages CMS (rekomenduojama)
+
+1. Atidarykite https://app.pagescms.org ir prisijunkite su GitHub paskyra.
+2. Leiskite Pages CMS pasiekti saugyklą **Svetain-** (Install / Authorize).
+3. Pasirinkite saugyklą ir šaką `claude/teatro-mokytojai-website-84hmib`.
+4. Kairėje matysite skiltis: **Naujienos**, **Renginiai**, **Ištekliai**, **Metodinė medžiaga**,
+   **Apie**, **Svetainės nustatymai** ir **Media** (nuotraukoms).
+5. Pakeitę spauskite **Save** – po ~5 min. pakeitimai atsiras svetainėje.
+
+Kitus redaktorius galima pakviesti per Pages CMS **Settings → Collaborators** (el. paštu).
+Redagavimo laukai aprašyti faile `.pages.yml`.
+
+## 3b. Kaip pridėti turinį tiesiogiai per GitHub
 
 ### Nauja naujiena
 Aplanke `_posts/` spauskite **Add file → Create new file**, pavadinkite

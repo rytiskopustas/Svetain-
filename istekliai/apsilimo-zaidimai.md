@@ -1,10 +1,9 @@
 ---
-layout: page
 title: Apšilimo žaidimai pamokos pradžiai
 lead: Greiti pratimai, padedantys grupei susitelkti, atsipalaiduoti ir pasiruošti kūrybai.
 ---
 
-[← Visi ištekliai]({{ '/istekliai/' | relative_url }})
+[← Visi ištekliai](/istekliai/)
 
 ## 1. Vardas ir judesys
 Rate kiekvienas pasako savo vardą ir parodo judesį. Visa grupė pakartoja.
@@ -28,4 +27,4 @@ Mokytojas pasako žodį (pvz., „džiaugsmas“, „audra“), grupė per 5 sek
 
 ---
 
-*Turite savo mėgstamų pratimų? [Pasidalinkite]({{ '/prisidek/' | relative_url }})!*
+*Turite savo mėgstamų pratimų? [Pasidalinkite](/prisidek/)!*

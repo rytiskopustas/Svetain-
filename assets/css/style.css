@@ -165,3 +165,7 @@ main.container { padding-bottom: 64px; min-height: 60vh; }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
 .footer-grid p { color: var(--muted); margin: .3em 0; }
 .small { color: var(--muted); font-size: .85rem; margin-top: 24px; }
+
+/* Nuotraukos */
+.post-image { display: block; width: 100%; border-radius: var(--radius); margin: 8px 0 24px; }
+.card-image { display: block; width: calc(100% + 40px); max-width: none; margin: -20px -20px 16px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius) var(--radius) 0 0; }

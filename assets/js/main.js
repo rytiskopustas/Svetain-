@@ -62,3 +62,45 @@
     document.getElementById('nieko').hidden = any;
   });
 })();
+
+// Kontaktų forma (Web3Forms): siunčiama neišeinant iš puslapio
+(function () {
+  var form = document.querySelector('.contact-form');
+  if (!form) return;
+  var status = form.querySelector('.form-status');
+  var button = form.querySelector('button[type="submit"]');
+
+  function show(text, ok) {
+    status.textContent = text;
+    status.className = 'form-status ' + (ok ? 'is-ok' : 'is-error');
+    status.hidden = false;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    var data = new FormData(form);
+    data.set('message', 'Tema: ' + data.get('tema') + '\n\n' + data.get('message'));
+    button.disabled = true;
+    button.textContent = 'Siunčiama…';
+    status.hidden = true;
+
+    fetch(form.action, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
+      .then(function (r) { return r.json(); })
+      .then(function (res) {
+        if (!res.success) throw new Error(res.message);
+        form.reset();
+        show('Ačiū! Žinutė išsiųsta – atsakysime kaip galima greičiau.', true);
+      })
+      .catch(function () {
+        show('Nepavyko išsiųsti žinutės. Pabandykite dar kartą po kelių minučių.', false);
+      })
+      .then(function () {
+        button.disabled = false;
+        button.textContent = 'Siųsti žinutę';
+      });
+  });
+})();

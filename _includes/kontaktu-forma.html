@@ -1,0 +1,36 @@
+{%- if site.web3forms_key and site.web3forms_key != "" -%}
+<form class="contact-form" id="forma" action="https://api.web3forms.com/submit" method="POST" novalidate>
+  <input type="hidden" name="access_key" value="{{ site.web3forms_key }}">
+  <input type="hidden" name="subject" value="Nauja žinutė iš svetainės „{{ site.title }}“">
+  <input type="hidden" name="from_name" value="{{ site.title }}">
+  <!-- Spąstai robotams: žmonės šio laukelio nemato -->
+  <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+  <div class="form-row">
+    <label>Vardas
+      <input type="text" name="name" required autocomplete="name">
+    </label>
+    <label>El. paštas
+      <input type="email" name="email" required autocomplete="email">
+    </label>
+  </div>
+  <label>Tema
+    <select name="tema">
+      <option>Klausimas ar pasiūlymas</option>
+      <option>Naujiena</option>
+      <option>Renginys</option>
+      <option>Metodinė medžiaga</option>
+      <option>Naudinga nuoroda</option>
+      <option>Kita</option>
+    </select>
+  </label>
+  <label>Žinutė
+    <textarea name="message" rows="7" required placeholder="Jei siūlote renginį – nurodykite datą, vietą ir nuorodą. Failus galite pridėti kaip nuorodą (pvz. Google Drive)."></textarea>
+  </label>
+  <p class="form-note">Jūsų vardą ir el. paštą naudosime tik atsakyti į šią žinutę.</p>
+  <button class="btn" type="submit">Siųsti žinutę</button>
+  <p class="form-status" role="status" aria-live="polite" hidden></p>
+</form>
+{%- else -%}
+<p id="forma"><a class="btn" href="mailto:{{ site.email }}">Rašyti el. laišką</a></p>
+{%- endif -%}

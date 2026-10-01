@@ -11,6 +11,8 @@ baseurl: ""
 
 # Kontaktai (pakeiskite savais)
 email: rytis.kopustas@gmail.com
+# Kontaktų formos raktas iš https://web3forms.com (kol tuščias – rodomas el. pašto mygtukas)
+web3forms_key: ""
 
 timezone: Europe/Vilnius
 permalink: /naujienos/:year/:month/:title/

@@ -1,4 +1,5 @@
 ---
+description: "Pasidalinkite naujiena, renginiu, pratimu ar scenarijumi su teatro mokytojų bendruomene."
 layout: page
 title: Prisidėk
 permalink: /prisidek/

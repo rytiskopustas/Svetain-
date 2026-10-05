@@ -1,4 +1,5 @@
 ---
+description: "Teatro mokytojų erdvė – nekomercinė iniciatyva, jungianti teatro pedagogus visoje Lietuvoje."
 layout: page
 title: Apie
 permalink: /apie/

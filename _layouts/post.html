@@ -11,7 +11,7 @@ layout: default
       {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
     </p>
   </header>
-  {% if page.image %}<img class="post-image" src="{{ page.image | relative_url }}" alt="">{% endif %}
+  {% if page.image and page.image != site.socialinis_paveikslelis %}<img class="post-image" src="{{ page.image | relative_url }}" alt="">{% endif %}
   <div class="prose">
     {{ content }}
   </div>

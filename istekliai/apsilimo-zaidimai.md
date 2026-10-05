@@ -1,4 +1,5 @@
 ---
+description: "5 greiti apšilimo pratimai ir žaidimai teatro pamokos pradžiai: grupės dėmesiui, pasitikėjimui ir kūrybai."
 title: Apšilimo žaidimai pamokos pradžiai
 lead: Greiti pratimai, padedantys grupei susitelkti, atsipalaiduoti ir pasiruošti kūrybai.
 ---

@@ -1,4 +1,5 @@
 ---
+description: "Teatro pamokos plano šablonas (45 min.): tikslai, apšilimas, pagrindinė veikla, parodymas ir refleksija."
 title: Pamokos plano šablonas
 lead: Paprasta struktūra teatro pamokai (45 min.). Nukopijuokite ir pritaikykite.
 ---

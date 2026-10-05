@@ -4,6 +4,11 @@ description: >-
   Bendruomenė teatro mokytojams – naujienos, renginiai, metodinė medžiaga
   ir patirties dalijimasis.
 lang: lt
+locale: lt_LT
+# Trumpas šūkis – rodomas pradžios puslapio pavadinime paieškoje
+tagline: Bendruomenė teatro mokytojams
+# Numatytasis paveikslėlis dalinantis nuoroda (turi sutapti su defaults žemiau)
+socialinis_paveikslelis: /assets/images/socialinis.png
 
 # Svetainės adresas (Cloudflare Pages). Įsigijus domeną, pakeiskite į "https://www.teatromokytojai.lt"
 url: "https://teatromokytojai.pages.dev"
@@ -19,11 +24,18 @@ permalink: /naujienos/:year/:month/:title/
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 feed:
   path: feed.xml
 
 defaults:
+  # Paveikslėlis, rodomas dalinantis nuoroda (Facebook, Messenger ir kt.)
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/socialinis.png
   - scope:
       path: ""
       type: posts

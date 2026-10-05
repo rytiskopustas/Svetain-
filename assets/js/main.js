@@ -56,7 +56,7 @@
         li.hidden = !match;
         if (match) groupAny = true;
       });
-      group.hidden = !groupAny;
+      group.hidden = q ? !groupAny : false;
       if (groupAny) any = true;
     });
     document.getElementById('nieko').hidden = any;

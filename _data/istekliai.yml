@@ -11,33 +11,3 @@
   kategorija: "Pamokų planai"
   aprasymas: "Paprastas struktūruotas šablonas teatro pamokai: tikslai, eiga, refleksija."
   nuoroda: "/istekliai/pamokos-planas/"
-
-- pavadinimas: "Lietuvos muzikos ir teatro akademija"
-  kategorija: "Organizacijos"
-  aprasymas: "Aukštoji mokykla, rengianti teatro menininkus ir pedagogus."
-  nuoroda: "https://lmta.lt"
-
-- pavadinimas: "Lietuvos nacionalinis dramos teatras"
-  kategorija: "Organizacijos"
-  aprasymas: "Repertuaras, edukacinės programos moksleiviams ir mokytojams."
-  nuoroda: "https://www.teatras.lt"
-
-- pavadinimas: "Nacionalinė švietimo agentūra"
-  kategorija: "Švietimo politika"
-  aprasymas: "Bendrosios programos, kvalifikacijos tobulinimas, olimpiados ir konkursai."
-  nuoroda: "https://www.nsa.smm.lt"
-
-- pavadinimas: "Emokykla"
-  kategorija: "Švietimo politika"
-  aprasymas: "Skaitmeninės mokymo priemonės ir Bendrųjų programų informacija."
-  nuoroda: "https://www.emokykla.lt"
-
-- pavadinimas: "IDEA – International Drama/Theatre and Education Association"
-  kategorija: "Tarptautinės organizacijos"
-  aprasymas: "Tarptautinis dramos ir teatro pedagogų tinklas."
-  nuoroda: "https://www.idea-org.net"
-
-- pavadinimas: "ASSITEJ International"
-  kategorija: "Tarptautinės organizacijos"
-  aprasymas: "Tarptautinė teatro vaikams ir jaunimui asociacija."
-  nuoroda: "https://www.assitej-international.org"

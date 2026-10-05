@@ -4,7 +4,7 @@ title: Ištekliai
 permalink: /istekliai/
 ---
 <h1>Ištekliai</h1>
-<p class="lead">Pratimai, pamokų planai, naudingos organizacijos ir nuorodos. Turite ką pasidalinti? <a href="{{ '/prisidek/' | relative_url }}">Siųskite mums</a>.</p>
+<p class="lead">Pratimai, pamokų planai ir scenarijai. Turite ką pasidalinti? <a href="{{ '/prisidek/' | relative_url }}">Siųskite mums</a>.</p>
 
 <label class="search">
   <span>Paieška</span>
@@ -12,18 +12,15 @@ permalink: /istekliai/
 </label>
 
 {% assign grupes = site.data.istekliai | group_by: "kategorija" %}
+{% assign zinomos = site.data.istekliu_kategorijos | map: "pavadinimas" %}
+{% for k in site.data.istekliu_kategorijos %}
+  {% assign g = grupes | where: "name", k.pavadinimas | first %}
+  {% include istekliu-grupe.html pavadinimas=k.pavadinimas ikona=k.ikona aprasymas=k.aprasymas items=g.items %}
+{% endfor %}
+{% comment %}Kategorijos, kurių nėra sąraše aukščiau, rodomos gale{% endcomment %}
 {% for g in grupes %}
-<section class="res-group">
-  <h2>{{ g.name }}</h2>
-  <ul class="res-list">
-    {% for r in g.items %}
-    {% assign vidinis = r.nuoroda | slice: 0 %}
-    <li data-search="{{ r.pavadinimas | downcase }} {{ r.aprasymas | downcase }}">
-      <a href="{% if vidinis == '/' %}{{ r.nuoroda | relative_url }}{% else %}{{ r.nuoroda }}{% endif %}"{% if vidinis != '/' %} target="_blank" rel="noopener"{% endif %}>{{ r.pavadinimas }}</a>{% if vidinis != '/' %} <span class="ext" aria-label="išorinė nuoroda">↗</span>{% endif %}
-      <p>{{ r.aprasymas }}</p>
-    </li>
-    {% endfor %}
-  </ul>
-</section>
+  {% unless zinomos contains g.name %}
+    {% include istekliu-grupe.html pavadinimas=g.name items=g.items %}
+  {% endunless %}
 {% endfor %}
 <p class="empty-note" id="nieko" hidden>Nieko nerasta.</p>

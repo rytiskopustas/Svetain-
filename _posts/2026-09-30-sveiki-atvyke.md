@@ -9,6 +9,6 @@ Džiaugiamės galėdami pristatyti naują erdvę teatro mokytojams. Čia rasite 
 ## Ką rasite svetainėje
 - **Naujienos** – aktualijos iš teatro ir švietimo pasaulio.
 - **Renginiai** – seminarai, festivaliai, kursai.
-- **Ištekliai** – pratimai, pamokų planai, naudingos nuorodos.
+- **Ištekliai** – pratimai, pamokų planai, scenarijai.
 
 Norite prisidėti? Užsukite į skiltį [Prisidėk](/prisidek/).

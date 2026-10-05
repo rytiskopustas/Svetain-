@@ -87,7 +87,7 @@ content:
         type: string
         required: true
       - name: kategorija
-        label: Kategorija (pvz. Pratimai ir žaidimai, Pamokų planai, Organizacijos)
+        label: Kategorija (Pratimai ir žaidimai, Pamokų planai arba Scenarijai)
         type: string
         required: true
       - name: aprasymas

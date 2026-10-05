@@ -1,0 +1,8 @@
+# Išteklių kategorijos ir jų tvarka puslapyje. Kategorija rodoma net jei joje dar nieko nėra.
+- pavadinimas: "Pratimai ir žaidimai"
+  ikona: "🎲"
+- pavadinimas: "Pamokų planai"
+  ikona: "📝"
+- pavadinimas: "Scenarijai"
+  ikona: "🎬"
+  aprasymas: "Pjesės ir scenarijai mokyklos teatrui, šventėms ir renginiams."

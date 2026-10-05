@@ -1,0 +1,17 @@
+<section class="res-group">
+  <h2>{% if include.ikona %}<span aria-hidden="true">{{ include.ikona }}</span> {% endif %}{{ include.pavadinimas }}</h2>
+  {% if include.aprasymas %}<p class="res-desc">{{ include.aprasymas }}</p>{% endif %}
+  {% if include.items and include.items.size > 0 %}
+  <ul class="res-list">
+    {% for r in include.items %}
+    {% assign vidinis = r.nuoroda | slice: 0 %}
+    <li data-search="{{ r.pavadinimas | downcase }} {{ r.aprasymas | downcase }}">
+      <a href="{% if vidinis == '/' %}{{ r.nuoroda | relative_url }}{% else %}{{ r.nuoroda }}{% endif %}"{% if vidinis != '/' %} target="_blank" rel="noopener"{% endif %}>{{ r.pavadinimas }}</a>{% if vidinis != '/' %} <span class="ext" aria-label="išorinė nuoroda">↗</span>{% endif %}
+      <p>{{ r.aprasymas }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="res-empty">Kol kas tuščia. Turite ką pasidalinti? <a href="{{ '/prisidek/' | relative_url }}#forma">Atsiųskite mums</a>.</p>
+  {% endif %}
+</section>

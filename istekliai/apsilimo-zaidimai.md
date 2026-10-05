@@ -9,7 +9,7 @@ lead: Greiti pratimai, padedantys grupei susitelkti, atsipalaiduoti ir pasiruoš
 Rate kiekvienas pasako savo vardą ir parodo judesį. Visa grupė pakartoja.
 **Tikslas:** susipažinimas, drąsa būti matomam.
 
-## 2. „Zip-Zap-Zop“
+## 2. „Hip-Hap-Hop“
 Energijos perdavimas ratu plojimu ir žodžiu. Tempas vis greitėja.
 **Tikslas:** dėmesys, reakcija, grupės ritmas.
 

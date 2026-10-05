@@ -19,13 +19,15 @@ permalink: /renginiai/
 <p class="empty-note" hidden>Artėjančių renginių šiuo metu nėra.</p>
 
 <h2>Įvykę</h2>
+{% assign ivyke = 0 %}
 <div class="event-list past">
 {% assign atvirksciai = renginiai | reverse %}
 {% for e in atvirksciai %}
   {% assign d = e.data | date: "%Y-%m-%d" %}
-  {% if d < now %}{% include event.html event=e %}{% endif %}
+  {% if d < now %}{% include event.html event=e %}{% assign ivyke = ivyke | plus: 1 %}{% endif %}
 {% endfor %}
 </div>
+{% if ivyke == 0 %}<p class="empty-note">Įvykusių renginių dar nėra.</p>{% endif %}
 
 <h2>Kalendorius</h2>
 <section class="calendar" aria-label="Renginių kalendorius">

@@ -84,7 +84,6 @@ Redaguokite `_data/istekliai.yml`. Ilgesnei medžiagai sukurkite `.md` failą ap
 Pavadinimas, aprašymas ir el. paštas – faile `_config.yml`.
 Spalvos – `assets/css/style.css` pradžioje.
 
-⚠️ Pavyzdinės naujienos ir renginiai pažymėti „Pavyzdys“ – pakeiskite juos tikrais.
 
 ## 4. Naujienų sekimas
 Svetainė automatiškai generuoja RSS srautą (`/feed.xml`), kurį lankytojai gali

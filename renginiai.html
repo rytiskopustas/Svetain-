@@ -26,3 +26,25 @@ permalink: /renginiai/
   {% if d < now %}{% include event.html event=e %}{% endif %}
 {% endfor %}
 </div>
+
+<h2>Kalendorius</h2>
+<section class="calendar" aria-label="Renginių kalendorius">
+  <div class="cal-head">
+    <button type="button" class="cal-nav" data-cal="-1" aria-label="Ankstesnis mėnuo">‹</button>
+    <h3 class="cal-title" aria-live="polite"></h3>
+    <button type="button" class="cal-nav" data-cal="1" aria-label="Kitas mėnuo">›</button>
+  </div>
+  <button type="button" class="cal-today-btn">Šiandien</button>
+  <div class="cal-grid" role="grid"></div>
+  <noscript><p class="empty-note">Kalendoriui rodyti reikalingas JavaScript.</p></noscript>
+</section>
+
+<dialog class="cal-dialog" aria-labelledby="cal-dialog-title">
+  <form method="dialog"><button class="cal-close" aria-label="Uždaryti">✕</button></form>
+  <h3 id="cal-dialog-title"></h3>
+  <div class="cal-dialog-body"></div>
+</dialog>
+
+<script id="renginiu-duomenys" type="application/json">
+[{% for e in renginiai %}{"pavadinimas":{{ e.pavadinimas | jsonify }},"data":{{ e.data | date: "%Y-%m-%d" | jsonify }},"laikas":{{ e.laikas | default: "" | jsonify }},"vieta":{{ e.vieta | default: "" | jsonify }},"aprasymas":{{ e.aprasymas | default: "" | jsonify }},"nuoroda":{{ e.nuoroda | default: "" | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]
+</script>

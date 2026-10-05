@@ -14,6 +14,10 @@ socialinis_paveikslelis: /assets/images/socialinis.png
 url: "https://teatromokytojai.pages.dev"
 baseurl: ""
 
+# Google Search Console patvirtinimas
+webmaster_verifications:
+  google: MeVjsAD-Dsdo4vkyNyRuyknp_CdCsQdbpwdtM3EMxVA
+
 # Kontaktai (pakeiskite savais)
 email: rytis.kopustas@gmail.com
 # Kontaktų formos raktas iš https://web3forms.com (kol tuščias – rodomas el. pašto mygtukas)

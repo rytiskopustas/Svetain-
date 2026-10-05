@@ -1,15 +1,19 @@
 <a class="skip" href="#turinys">Pereiti prie turinio</a>
 <header class="site-header">
-  <div class="container nav-wrap">
+  <div class="nav-wrap">
     <a class="brand" href="{{ '/' | relative_url }}"><span aria-hidden="true">🎭</span> {{ site.title }}</a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="meniu" aria-label="Meniu"><span></span><span></span><span></span></button>
     <nav id="meniu" class="nav" aria-label="Pagrindinis meniu">
-      {%- assign nav = "naujienos/:Naujienos,renginiai/:Renginiai,istekliai/:Ištekliai,prisidek/:Prisidėk,apie/:Apie" | split: "," -%}
+      {%- assign nav = ":🏠:Pradžia,naujienos/:📰:Naujienos,renginiai/:📅:Renginiai,istekliai/:📚:Ištekliai,prisidek/:🤝:Prisidėk,apie/:ℹ️:Apie" | split: "," -%}
       {%- for item in nav -%}
         {%- assign parts = item | split: ":" -%}
         {%- assign href = "/" | append: parts[0] -%}
-        <a href="{{ href | relative_url }}"{% if page.url contains href %} aria-current="page"{% endif %}>{{ parts[1] }}</a>
-      {%- endfor -%}
+        {%- if parts[0] == "" -%}
+          {%- if page.url == "/" -%}{%- assign current = true -%}{%- else -%}{%- assign current = false -%}{%- endif -%}
+        {%- elsif page.url contains href -%}{%- assign current = true -%}
+        {%- else -%}{%- assign current = false -%}{%- endif %}
+      <a href="{{ href | relative_url }}"{% if current %} aria-current="page"{% endif %}><span class="nav-icon" aria-hidden="true">{{ parts[1] }}</span>{{ parts[2] }}</a>
+      {%- endfor %}
     </nav>
   </div>
 </header>

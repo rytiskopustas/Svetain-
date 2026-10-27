@@ -95,3 +95,8 @@ bundle install
 bundle exec jekyll serve
 # atidarykite http://localhost:4000/
 ```
+
+## Ateities darbai
+
+- [ ] Ištekliuose sukurti kategoriją **„Naudingos nuorodos“** (organizacijos, svetainės, video ir pan.).
+  Kategorijos pridedamos faile `_data/istekliu_kategorijos.yml`.
